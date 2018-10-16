@@ -1,15 +1,9 @@
 <template>
  <div class="wrapper"> 
-   <swiper :options="swiperOption">
+   <swiper :options="swiperOption" v-if="showSwiper">             
     <!-- slides -->
-    <swiper-slide>
-        <img class="swipe-img" src="http://img1.qunarzz.com/piao/fusion/1809/c6/2467595fffc3b302.jpg_750x200_cca13d51.jpg" alt="去哪儿门票">
-    </swiper-slide>
-    <swiper-slide>
-        <img class="swipe-img" src="http://img1.qunarzz.com/piao/fusion/1809/4e/4e403d904b3e1502.jpg_750x200_33a2e63b.jpg" alt="去哪儿门票">
-    </swiper-slide>
-    <swiper-slide>
-        <img class="swipe-img" src="http://img1.qunarzz.com/piao/fusion/1809/12/856f100069809e02.jpg_750x200_e3485a2b.jpg" alt="去哪儿门票">
+    <swiper-slide v-for="item of list" :key="item.id">
+        <img class="swipe-img" :src="item.imgUrl" alt="去哪儿门票">
     </swiper-slide>
     <!-- Optional controls -->
     <div class="swiper-pagination"  slot="pagination"></div>
@@ -20,12 +14,21 @@
 <script>
 export default {
   name: "HomeSwiper",
+  props:{
+    list:Array
+  },
   data() {
     return {
       swiperOption: {
-          pagination:'.swiper-pagination'
+          pagination:'.swiper-pagination',
+          autoplay:true
       }
     };
+  },
+  computed:{
+    showSwiper(){
+      return this.list.length
+    }
   }
 };
 </script>

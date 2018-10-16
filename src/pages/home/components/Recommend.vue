@@ -4,7 +4,11 @@
             <span  class="iconfont heart">&#xe6aa;</span>
           猜你喜欢</div>
           <ul>
+<<<<<<< HEAD
             <li class="item" v-for="x of recommendList" :key="x.id">
+=======
+            <li class="item" v-for="x of recommend" :key="x.id">
+>>>>>>> master
               <div class="item-img-wrapper">
                 <img class="item-img" :src="x.imgUrl" alt="">      
               </div>
@@ -29,6 +33,7 @@
 <script>
 export default {
   name: "HomeRecommend",
+<<<<<<< HEAD
   data() {
     return {
       recommendList: [
@@ -94,6 +99,13 @@ export default {
         }
       ]
     };
+=======
+  props:{
+    recommend:Array
+  },
+  data() {
+    return {};
+>>>>>>> master
   }
 };
 </script>

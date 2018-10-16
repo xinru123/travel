@@ -2,7 +2,11 @@
     <div class="HomeRecommend">
           <div class="title">周末去哪儿</div>
           <ul>
+<<<<<<< HEAD
             <li class="item" v-for="x of recommendList" :key="x.id">
+=======
+            <li class="item" v-for="x of weekend" :key="x.id">
+>>>>>>> master
               <div class="item-img-wrapper">
                 <img class="item-img" :src="x.imgUrl" alt="">      
               </div>
@@ -17,6 +21,7 @@
 <script>
 export default {
   name: "HomeWeekend",
+<<<<<<< HEAD
   data() {
     return {
       recommendList: [
@@ -57,6 +62,13 @@ export default {
         }
       ]
     };
+=======
+  props:{
+   weekend:Array
+  },
+  data() {
+    return {};
+>>>>>>> master
   }
 };
 </script>
@@ -66,7 +78,10 @@ export default {
 .title 
   line-height: 0.9rem;
   text-indent: 0.2rem;
+<<<<<<< HEAD
   margin-top: 0.2rem;
+=======
+>>>>>>> master
   background :$weekendTitle
 .item
   height :4.04rem
@@ -95,4 +110,7 @@ export default {
       line-height: .42rem;
       ellipsis()
 </style>
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
