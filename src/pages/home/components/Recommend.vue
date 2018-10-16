@@ -4,7 +4,7 @@
             <span  class="iconfont heart">&#xe6aa;</span>
           猜你喜欢</div>
           <ul>
-            <li class="item" v-for="x of recommendList" :key="x.id">
+            <li class="item" v-for="x of recommend" :key="x.id">
               <div class="item-img-wrapper">
                 <img class="item-img" :src="x.imgUrl" alt="">      
               </div>
@@ -29,71 +29,11 @@
 <script>
 export default {
   name: "HomeRecommend",
+  props:{
+    recommend:Array
+  },
   data() {
-    return {
-      recommendList: [
-        {
-          id: "0001",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1804/c8/c88bb5e69c9a9c5ea3.img.jpg_200x200_740720ff.jpg",
-          title: "古北水镇",
-          icon: "&#xe810;",
-          num: "3267",
-          price: "￥141起",
-          local: "密云县"
-        },
-        {
-          id: "0002",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1606/36/362f693e73d95311e2.water.jpg_200x200_c11e4e13.jpg",
-          title: "喇叭沟原始森林公园",
-          icon: "&#xe810;",
-          num: "3267",
-          price: "￥41起",
-          local: "怀柔区"
-        },
-        {
-          id: "0003",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1603/85/85c883189bf7293390.water.jpg_200x200_3165123d.jpg",
-          title: "什刹海",
-          icon: "&#xe810;",
-          num: "3267",
-          price: "￥61起",
-          local: "西城区"
-        },
-        {
-          id: "0004",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1505/d2/d274c92de14c93da.water.jpg_200x200_2cce447f.jpg ",
-          title: "颐和园",
-          icon:"&#xe810;",
-          num: "3267",
-          price: "￥160起",
-          local: "海淀区"
-        },
-        {
-          id: "0005",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1803/7b/7b023b9728f0834fa3.img.jpg_200x200_5fddc1d8.jpg",
-          title: "世界花卉大观园",
-          icon: "&#xe810;",
-          num: "3267",
-          price: "￥99起",
-          local: "丰台区"
-        },
-        {
-          id: "0006",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1604/78/78873494f26e554090.water.jpg_200x200_331422ad.jpg",
-          title: "京东石林峡",
-          icon: "&#xe810;",
-          num: "3267",
-          price: "￥61起",
-          local: "平谷区"
-        }
-      ]
-    };
+    return {};
   }
 };
 </script>
