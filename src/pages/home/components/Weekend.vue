@@ -34,17 +34,14 @@ export default {
   margin-top: 0.2rem;
   background :$weekendTitle
 .item
-  height :4.04rem
   width :100%
   margin-bottom :.1rem
   .item-img-wrapper 
     width: 100%;
-    height: 0;
-    padding-bottom :2.8rem
     .item-img 
       width: 100%;
-      height: 2.78rem;
-    
+      height:37.06%
+
   .item-info 
     padding:.14rem .2rem .2rem .2rem ;
     .item-title 

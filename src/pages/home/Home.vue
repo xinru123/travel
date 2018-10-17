@@ -5,7 +5,6 @@
    <home-icons :icons="iconList"></home-icons>
    <home-recommend :recommend="recommendList"></home-recommend>
    <home-weekend :weekend="weekendList"></home-weekend>
-
   </div>
 </template>
 
@@ -58,6 +57,7 @@ export default {
 </script>
 
 
-<style scoped>
+<style lang="stylus" scoped>
+ 
 
 </style>
