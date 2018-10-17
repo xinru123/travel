@@ -27,6 +27,7 @@ export default {
     }
   },
   computed:{
+   
     pages(){
       const pages=[]
       this.icons.forEach((x,index)=>{
