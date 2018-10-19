@@ -5,21 +5,21 @@
          <div class="title border-topbottom">您的位置</div>
          <div class="button-list">
              <div class="button-wrapper">
-                <div class="button">北京</div>
+                <div class="button">{{this.city}}</div>
              </div>
          </div>
      </div>
      <div class="area">
          <div class="title border-topbottom">热门城市</div>
          <div class="button-list">
-             <div class="button-wrapper" v-for="(item ,index) of list" :key="index">
+             <div class="button-wrapper" v-for="(item ,index) of list" :key="index" @click="handleCityClick(item)">
                 <div class="button">{{item}}</div>
              </div>
          </div>
      </div>
      <div class="area" v-for="x of list1" :key="x.title">
         <div class="title border-topbottom" :ref="x.title">{{x.title}}</div>
-        <div class="item-list" v-for="(city,index) of x.cityName" :key="index">
+        <div class="item-list" v-for="(city,index) of x.cityName" :key="index" @click="handleCityClick(city)">
             <div class="item border-bottom">{{city}}</div> 
         </div>     
      </div>
@@ -28,6 +28,8 @@
 </template>
 <script>
 import Bscroll from 'better-scroll'
+import { mapState,mapMutations } from 'vuex'
+
 export default {
    name:"CityList",
    props:{
@@ -48,7 +50,22 @@ export default {
             // console.log("Ok")
         }
      } 
+   },
+   methods:{
+      handleCityClick(city){
+        //   this.$store.commit('changeCity',city)
+          this.changeCity(city)
+          this.$router.push('/')
+      },
+      ...mapMutations(['changeCity'])
+   },
+   computed:{
+    ...mapState(['city'])
+    // ...mapState({
+    //  currentCity:'city' //这样写的时候在{{}}中写this.currentCity
+    //})
    }
+
 }
 </script>
 <style lang="stylus" scoped>
