@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <router-view/>
+    <!--keep-alive中的数据被缓存起来了 -->
+    <keep-alive>
+      <router-view/>
+    </keep-alive>
   </div>
 </template>
 
