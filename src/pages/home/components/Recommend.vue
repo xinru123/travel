@@ -4,7 +4,7 @@
             <span  class="iconfont heart">&#xe6aa;</span>
           猜你喜欢</div>
           <ul>
-            <li class="item" v-for="x of recommend" :key="x.id">
+            <router-link class="item" v-for="x of recommend" :key="x.id" :to="'/detail/'+x.id">
               <div class="item-img-wrapper">
                 <img class="item-img" :src="x.imgUrl" alt="">      
               </div>
@@ -22,7 +22,7 @@
                   <span class="local">{{x.local}}</span>
                 </div>
               </div>
-            </li>
+            </router-link>
           </ul>
     </div>
 </template>
