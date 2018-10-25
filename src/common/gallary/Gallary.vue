@@ -13,6 +13,7 @@
    </div>
 </template>
 <script>
+// 备注备注 111
 export default {
   name: "CommonGallary",
   props: {
