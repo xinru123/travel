@@ -25,6 +25,7 @@ export default {
     },
     methods:{
     handleScroll(){
+   
         const top=document.documentElement.scrollTop
        
         if(top>60){
@@ -37,8 +38,15 @@ export default {
         }
     }
     },
+    /*---------------------重要！！！全局事件解绑-----------------*/
     activated(){
+        // 监听事件绑定在全局window上会对其他组件也产生影响
       window.addEventListener('scroll',this.handleScroll)
+    },
+    // 在页面即将隐藏或即将被替换成新的页面时执行deactivated(){}，
+    deactivated(){
+        //清除监听事件
+        window.removeEventListener('scroll',this.handleScroll)
     }
 }   
 </script>
