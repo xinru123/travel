@@ -7,11 +7,15 @@
             <div class="banner-title">{{sightName}}</div>
         </div>
     </div>
-    <common-gallary :imgs="gallaryImgs"   v-show="showGallary" @close="handleGalleryClose"></common-gallary>
+    <fade-animation>
+        <!-- <common-gallary>作为slot -->
+       <common-gallary :imgs="gallaryImgs"   v-show="showGallary" @close="handleGalleryClose"></common-gallary>
+    </fade-animation>
 </div> 
 </template>
 <script>
 import CommonGallary from 'gallary/Gallary.vue'
+import FadeAnimation from 'common/fade/FadeAnimation.vue'
 export default {
     name:'DetailBanner',
     props:{
@@ -27,7 +31,8 @@ export default {
       }
     },
     components:{
-        CommonGallary
+        CommonGallary,
+        FadeAnimation
     },
     methods:{
         handleBannerClick(){
