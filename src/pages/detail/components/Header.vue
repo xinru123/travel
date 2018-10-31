@@ -68,6 +68,7 @@ export default {
      font-size :.32rem 
 
 .header-fixed
+   z-index :2
    display:block
    height:$headerHeight
    line-height:$headerHeight

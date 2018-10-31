@@ -19,5 +19,10 @@ export default new Router({
       name: 'Detail',
       component: Detail
     }
-  ]
+  ],
+  //vue-router 滚动行为，让由路由打开的页面默认在最顶部
+  scrollBehavior (to, from, savedPoswexi) {
+    return { x: 0, y: 0 }
+  } 
+
 })

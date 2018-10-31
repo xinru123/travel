@@ -29,7 +29,7 @@ export default {
     },
     methods:{
     getHomeInfo(){
-      axios('/api/city.json').then(this.getHomeInfoSucc)
+      axios.get('/api/city.json').then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc(res){
       res=res.data
