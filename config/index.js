@@ -12,10 +12,11 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
       '/api':{
-        target:'http://localhost:8080',
-        pathRewrite:{
-          '^/api':'static/mock'
-        }
+        target:'http://zxr.kiwifruits.cn',
+        // target:'http://localhost:8080',
+        // pathRewrite:{
+        //   '^/api':'static/mock'
+        // }
       }
     },
 

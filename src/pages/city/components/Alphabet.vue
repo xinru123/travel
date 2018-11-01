@@ -2,7 +2,7 @@
    <ul class="list">
         <li class="item" v-for="(item,index) of letters" :key="index"
          @click="handleLetterClick"
-         @touchstart="handleTouchStart"
+         @touchstart.prevent="handleTouchStart"
          @touchmove="handleTouchMove"
          @touchend="handleTouchEnd"
          :ref="item">{{item}}</li>
@@ -47,7 +47,7 @@ export default {
           clearTimeout(this.timer);
         }
         this.timer = setTimeout(() => {
-          const touchY = e.touches[0].clientY - 79;
+          const touchY = e.touches[0].clientY - 89;
           const index = Math.floor((touchY - this.startY) / 20);
           if (index >= 0 && index <= this.letters.length) {
             this.$emit("change", this.letters[index]);
@@ -68,14 +68,14 @@ export default {
 
 .list 
   position: absolute;
-  top: 1.78rem;
+  top: 1.58rem;
   right: 0;
   bottom: 0;
   width: 0.4rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
-
+  
   .item 
     text-align: center;
     line-height: 0.4rem;

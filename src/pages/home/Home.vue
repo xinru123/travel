@@ -39,7 +39,8 @@ export default {
   },
   methods:{
     getHomeInfo(){
-      axios.get('/api/index.json?city='+this.city).then(this.getHomeInfoSucc)
+      // http://zxr.kiwifruits.cn/mock/index.json
+      axios.get('http://zxr.kiwifruits.cn/mock/index.php?city='+this.city).then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc(res){
       res=res.data

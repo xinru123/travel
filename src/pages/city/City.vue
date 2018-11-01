@@ -29,7 +29,7 @@ export default {
     },
     methods:{
     getHomeInfo(){
-      axios.get('/api/city.json').then(this.getHomeInfoSucc)
+      axios.get('http://zxr.kiwifruits.cn/mock/city.php').then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc(res){
       res=res.data

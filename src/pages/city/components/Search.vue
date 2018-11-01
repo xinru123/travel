@@ -65,7 +65,8 @@ export default {
 <style lang="stylus" scoped>
 @import '~styles/varibles.styl' 
 .search
-    height :.72rem
+    z-index:50
+    height:.72rem
     background:$bgColor
     padding:0 .1rem
     box-sizing :border-box

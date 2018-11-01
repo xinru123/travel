@@ -33,7 +33,7 @@ export default {
     },
     methods:{
       getDetailInfo(){
-        axios.get('/api/detail.json',  {
+        axios.get('http://zxr.kiwifruits.cn/mock/detail.php',  {
             params:{
               id: this.$route.params.id
             }
